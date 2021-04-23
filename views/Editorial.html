@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Publisher</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+   ol.d {
+		list-style-type: number;
+	}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div  style="margin-left: 5%">
+            <h2>Publisher Details</h2>
+
+            {{#editorial}}
+
+				<ul>
+                     <li><label class="form-label">Publisher</label></li>
+                    <input type="text" class="form-control" id="publisher" value="{{publisher}}" readonly>              
+				</ul>
+				<ul>         
+                     <li><label class="form-label">Country</label></li>
+                    <input type="text" class="form-control" id="country" value="{{country}}" readonly>
+				</ul>
+				<ul>  
+                     <li><label class="form-label">Founded</label></li>
+                    <input type="text" class="form-control" id="country" value="{{founded}}" readonly>
+				</ul>
+				<ul> 
+                    <li><label class="form-label">Genere</label></li>
+                    <input type="text" class="form-control" id="country" value="{{genere}}" readonly>
+				</ul>
+
+		<h3>Books Published</h3>
+        <ol class="d">
+			<li>{{editorial2}}</li>      
+			<li>{{editorial3}}</li>
+		</ol>	
+        <a href="/" class="btn btn-outline-dark">Go back to Main Page</a></center>
+
+		</div>
+	</div>   
+
+        {{/editorial}}
+
+
+</body>

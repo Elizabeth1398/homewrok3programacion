@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 {
+  width: 100%;    
+  background-color: #f1f1c1;
+}
+</style>
+</head>
+<body>
+ <div class="container">
+  <div class="row" style="margin-top: 5%;">
+    <h1>Book List</h1>
+    <table id="t01">
+      <tr>
+		  <th>Title</th>
+		  <th>Edition</th>
+		  <th>Copyright</th>
+		  <th>Language</th>
+		  <th>Pages</th>
+		  <th>Author Name</th>
+		  <th>Publisher Name</th>
+      </tr>
+    
+      {{#Books}}
+      <tr>
+		  <td>{{title}}</a></td>
+		  <td>{{edition}}</td>
+		  <td>{{copyright}}</td>
+		  <td>{{language}}</td>
+		  <td>{{pages}}</td>
+		  <td><a href="author/{{author_id}}"/>{{author}}</td>
+		  <td><a href="editorial/{{publisher_id}}"/>{{publisher}}</td>
+      </tr>
+      {{/Books}}
+     </table>  
+   </div>
+ </div>
+</body>
